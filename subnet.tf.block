@@ -1,0 +1,10 @@
+resource "aws_subnet" "example" {
+  vpc_id            = aws_vpc.example.id
+  cidr_block        = "172.31.0.0/20"
+  availability_zone = "eu-north-1c"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "tf-example"
+  }
+}
