@@ -18,9 +18,10 @@ resource "aws_instance" "web" {
   
   #subnet_id     = aws_subnet.example.id
   associate_public_ip_address = true
-  user_data_base64 = filebase64("userdata.sh")
+  user_data = local.user_data
   tags = {
     Name = "web"
   }
+  
 
 }
